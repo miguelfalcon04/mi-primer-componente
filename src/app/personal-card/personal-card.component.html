@@ -1,0 +1,28 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2">
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-col>
+          <ion-col size="2">
+            <ion-text color="dark"> {{name}} {{ surname | slice:0:1 | uppercase }}. </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item>
+      <ion-input label="Nombre" type="text" placeholder="Nombre" labelPlacement="floating" [value]="name" readonly=""> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Apellido" type="text" placeholder="Apellido" labelPlacement="floating" [value]="surname" readonly=""> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Edad" type="text" placeholder="Edad" labelPlacement="floating" [value]="age" readonly=""> </ion-input>
+    </ion-item>
+  </ion-card-content>
+</ion-card>

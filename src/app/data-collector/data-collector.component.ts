@@ -1,3 +1,4 @@
+import { state } from '@angular/animations';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -22,9 +23,7 @@ export class DataCollectorComponent {
   addPerson() {
     // Verificar si los campos están llenos antes de guardar
     if (this.person.name && this.person.surname && this.person.age) {
-      // Guardar la persona en localStorage
-      localStorage.setItem('person', JSON.stringify(this.person));
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home'], {state: {person: this.person}});
     } else {
       // Aquí puedes agregar lógica para manejar campos vacíos, como mostrar un mensaje de error
       console.log('Por favor complete todos los campos.');

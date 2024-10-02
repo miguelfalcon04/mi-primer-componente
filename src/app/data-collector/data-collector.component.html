@@ -1,24 +1,26 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-col>
-      <ion-row >
+      <ion-row>
         <ion-item>
-          <ion-input label="Introduzca su nombre"></ion-input>
+          <ion-label position="floating">Introduzca su nombre</ion-label>
+          <ion-input [(ngModel)]="person.name"></ion-input> <!-- Vinculado a person.name -->
         </ion-item>
       </ion-row>
-      <ion-row >
+      <ion-row>
         <ion-item>
-          <ion-input label="Introduzca su apellido"></ion-input>
+          <ion-label position="floating">Introduzca su apellido</ion-label>
+          <ion-input [(ngModel)]="person.surname"></ion-input> <!-- Vinculado a person.surname -->
         </ion-item>
       </ion-row>
-      <ion-row >
+      <ion-row>
         <ion-item>
-          <ion-input label="Introduzca su edads"></ion-input>
+          <ion-label position="floating">Introduzca su edad</ion-label>
+          <ion-input type="number" [(ngModel)]="person.age"></ion-input> <!-- Vinculado a person.age -->
         </ion-item>
       </ion-row>
     </ion-col>
   </ion-grid>
 
-<ion-button [routerLink]= "['/home']"> Añadir </ion-button>
-
+  <ion-button (click)="addPerson()">Añadir</ion-button> <!-- Cambia el enlace al botón -->
 </ion-content>

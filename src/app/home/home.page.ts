@@ -19,7 +19,7 @@ export class HomePage  {
 
   constructor(private router:Router) {
     this.people.push({
-      name: "Miguel J.",
+      name: "Miguel",
       surname: "Falcon",
       age: 20
     });

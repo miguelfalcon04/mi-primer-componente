@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { HomePageModule } from '../home/home.module';
 
 
 @Component({
@@ -6,15 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './personal-card.component.html',
   styleUrls: ['./personal-card.component.scss'],
 })
-export class PersonalCardComponent  implements OnInit {
+export class PersonalCardComponent {
   @Input('name') name:string = "";
   @Input('surname') surname:string = "";
   @Input('age') age:number = 0;
-
+  @Input('fav') fav: Boolean = false;
 
   constructor() { }
 
-  ngOnInit() {}
+  onFavClick(){
+
+  }
+
+
 
 
 }

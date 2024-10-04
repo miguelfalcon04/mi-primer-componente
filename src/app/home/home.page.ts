@@ -7,6 +7,7 @@ export interface Person {
   name: string,
   surname: string,
   age: number
+  fav: boolean
 }
 
 @Component({
@@ -21,7 +22,8 @@ export class HomePage  {
     this.people.push({
       name: "Miguel",
       surname: "Falcon",
-      age: 20
+      age: 20,
+      fav: false
     });
 
     this.router.events.pipe(
@@ -31,12 +33,15 @@ export class HomePage  {
       if (navigation && navigation.extras.state) {
         const newPerson: Person = navigation.extras.state['person'];
 
-        // Verificar si hay una nueva persona y añadirla
         if (newPerson) {
           this.people.push(newPerson);
         }
       }
     });
+
+  }
+
+  deleteOnClick(){
 
   }
 

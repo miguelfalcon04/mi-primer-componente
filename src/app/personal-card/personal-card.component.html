@@ -9,6 +9,14 @@
           <ion-col size="2">
             <ion-text color="dark"> {{name}} {{ surname | slice:0:1 | uppercase }}. </ion-text>
           </ion-col>
+          <ion-col size="2">
+            <ion-button class="fav-button" fill="clear" aria-label="Favorite" (click)="onFavClick()">
+              <ion-icon slot="icon-only"  color="danger" name="heart" aria-hidden="true"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="2">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-title>
